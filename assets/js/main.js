@@ -6,7 +6,12 @@ var isMobile = (function() {
 
 if (isMobile) {
     $('#video video source').attr('src', $('#video video source').data('mobile-src'));
+    $('.main-video').css('filter', 'none');
+} else {
+    $('#video video source').attr('src', $('#video video source').data('src'));
 }
+
+$('#video video')[0].load();
 
 $(function () {
     var controller = new ScrollMagic.Controller();
