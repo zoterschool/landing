@@ -24,6 +24,7 @@ body {
 
 .main-video.blur {
     filter: brightness(60%) blur(5px);
+    transform: scale(1.1);
 }
 
 #video {
