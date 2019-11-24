@@ -1,0 +1,552 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    width: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main-video {
+    width: 100%;
+    height: 100%;
+    filter: brightness(60%) blur(5px);
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+#video {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /*z-index: -1;*/
+}
+
+#video .content {
+    text-align: center;
+    color: #ffffffba;
+    width: 100%;
+    position: absolute;
+    bottom: 40%;
+    font-family: 'Oswald', sans-serif;
+    padding: 0 20px;
+}
+
+#video .content h1, #video .content h2 {
+    margin: 0;
+}
+
+#video .content h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+#video .content img {
+    animation: MoveUpDown 1s linear infinite;
+    width: 100px;
+    position: absolute;
+    cursor: pointer;
+    left: calc(50% - 50px);
+}
+
+#video .content h2 {
+    font-size: 2.5em;
+}
+
+#video-description {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#video-description .content {
+    text-align: center;
+    color: #ffffffba;
+    width: 100%;
+    position: absolute;
+    bottom: 40%;
+    font-family: 'Oswald', sans-serif;
+    padding: 0 20px;
+}
+
+#video-description .content h1, #video-description .content h2 {
+    margin: 0;
+}
+
+#video-description .content h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+#video-description .content img {
+    animation: MoveUpDown 1s linear infinite;
+    width: 100px;
+    position: absolute;
+    cursor: pointer;
+    left: calc(50% - 50px);
+}
+
+#video-description .content h2 {
+    font-size: 2.5em;
+}
+
+#benefits, #study_time, #home_study, #explain_details {
+    width: 100%;
+    background: #fff;
+    padding: 20px 60px;
+    color: rgba(26, 26, 26, .7);
+}
+
+#benefits .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#benefits .content .card {
+    width: 33.3333%;
+    padding: 20px;
+}
+
+#benefits .content .card img {
+    width: 100%;
+}
+
+#benefits .content .card .caption {
+    font-size: 1.6em;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(26, 26, 26, .7);
+    text-align: center;
+    margin-top: 25px;
+}
+
+#benefits .content .card .caption b {
+    color: rgba(26, 26, 26, 0.9);
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        bottom: -80px;
+    }
+    50% {
+        bottom: -75px;
+    }
+}
+
+.section > h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: rgba(26, 26, 26, .9);
+}
+
+.quotes {
+    font-size: 2em;
+    position: relative;
+    padding: 60px 0 40px 20px;
+}
+
+.quotes:before {
+    content: '';
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/svg/quote-left-solid.svg);
+    top: -30px;
+    left: 0;
+    position: absolute;
+}
+
+#study_time, #explain_details {
+    background-color: #1a2913;
+    color: rgb(146, 154, 144);
+}
+
+#study_time h1, #explain_details h1 {
+    color: #ffffff94;
+}
+
+#study_time {
+    position: relative;
+    overflow: hidden;
+}
+
+#study_time > * {
+    position: relative;
+    z-index: 1;
+}
+
+#study_time h1 {
+    text-align: right;
+}
+
+#study_time .background {
+    position: absolute;
+    opacity: 0.2;
+    top: 15px;
+    width: 350px;
+    transform: rotate(18deg);
+    z-index: 0;
+    border-radius: 5px;
+}
+
+#study_time .quotes:before, #explain_details .quotes:before {
+    background-image: url(../img/svg/quote-left-solid-white.svg);
+}
+
+#study_time .quotes:before {
+    left: auto;
+    right: 0;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+#training_video .content {
+    font-size: 1.8em;
+    padding: 0 60px;
+    padding-bottom: 40px;
+}
+
+#home_study {
+    overflow: hidden;
+    position: relative;
+}
+
+#home_study > * {
+    position: relative;
+    z-index: 1;
+}
+
+#home_study .background {
+    position: absolute;
+    opacity: 0.3;
+    top: 40px;
+    right: 0;
+    width: 500px;
+    transform: rotate(12deg);
+    z-index: 0;
+    border-radius: 5px;
+    filter: brightness(1.1);
+}
+
+#explain_details {
+    position: relative;
+    overflow: hidden;
+}
+
+#explain_details > * {
+    position: relative;
+    z-index: 1;
+}
+
+#explain_details h1 {
+    text-align: right;
+}
+
+#explain_details .background {
+    position: absolute;
+    opacity: 0.4;
+    top: 50px;
+    left: 0;
+    width: 550px;
+    transform: rotate(-7deg);
+    z-index: 0;
+    border-radius: 5px;
+    filter: brightness(0.5);
+}
+
+#explain_details .quotes:before {
+    left: auto;
+    right: 0;
+}
+
+#location .content > div {
+    font-size: 1.8em;
+    padding: 0 60px;
+    padding-bottom: 40px;
+}
+
+footer {
+    background-color: #e8e8e8;
+    font-size: 1.3em;
+    font-family: 'Oswald', sans-serif;
+    color: rgba(26, 26, 26, .7);
+    letter-spacing: 0.5;
+}
+
+footer div {
+    text-align: center;
+    padding: 20px;
+}
+
+/*.slide-in {*/
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+    /*-webkit-transition: all 0.7s ease-out;*/
+    /*transition: all 0.7s ease-out;*/
+    /*-webkit-transform: translate3d(0, 50px, 0);*/
+    /*transform: translate3d(0, 50px, 0);*/
+/*}*/
+
+/*.is-active .slide-in {*/
+    /*visibility: visible;*/
+    /*opacity: 1;*/
+    /*-webkit-transform: translate3d(0, 0, 0);*/
+    /*transform: translate3d(0, 0, 0);*/
+/*}*/
+
+/*.slide-in.slide-in-delayed {*/
+    /*-webkit-transition-delay: 0.2s;*/
+    /*transition-delay: 0.2s;*/
+/*}*/
+
+/*.slide-left {*/
+    /*-webkit-transition: all 0.7s ease-out;*/
+    /*transition: all 0.7s ease-out;*/
+    /*-webkit-transform: translate3d(50px, 0, 0);*/
+    /*transform: translate3d(50px, 0, 0);*/
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+/*}*/
+
+/*.is-active .slide-left {*/
+    /*visibility: visible;*/
+    /*opacity: 1;*/
+    /*-webkit-transform: translate3d(0, 0, 0);*/
+    /*transform: translate3d(0, 0, 0);*/
+/*}*/
+
+/*.slide-right {*/
+    /*-webkit-transition: all 0.7s ease-out;*/
+    /*transition: all 0.7s ease-out;*/
+    /*-webkit-transform: translate3d(-50px, 0, 0);*/
+    /*transform: translate3d(-50px, 0, 0);*/
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+/*}*/
+
+/*.is-active .slide-right {*/
+    /*visibility: visible;*/
+    /*opacity: 1;*/
+    /*-webkit-transform: translate3d(0, 0, 0);*/
+    /*transform: translate3d(0, 0, 0);*/
+/*}*/
+
+#photos .content {
+    padding: 0 60px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    flex-direction: row;
+    position: relative;
+}
+
+.gallery > a {
+    width: calc(20% - 4px);
+    overflow: hidden;
+    margin: 2px;
+    position: relative;
+}
+
+.gallery > a:after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    -webkit-transition: background-color 0.15s ease 0s;
+    -moz-transition: background-color 0.15s ease 0s;
+    -o-transition: background-color 0.15s ease 0s;
+    transition: background-color 0.15s ease 0s;
+}
+
+.gallery > a > img {
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.15s ease 0s;
+    -moz-transition: -moz-transform 0.15s ease 0s;
+    -o-transition: -o-transform 0.15s ease 0s;
+    transition: transform 0.15s ease 0s;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.gallery > a:hover > img {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.gallery > a:hover:after {
+    background-color: #0000006e;
+}
+
+.youtube-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.youtube-container > .youtube {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 1300px) {
+    body {
+        font-size: 18px;
+    }
+
+    #study_time, #home_study, #explain_details {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    #explain_details .background {
+        left: 50px;
+        width: 750px;
+    }
+
+    #home_study .background {
+        right: 50px;
+        width: 750px
+    }
+
+    #study_time .background {
+        top: -25px;
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #benefits .content .card {
+        width: 50%;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #benefits .content .card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #benefits .content .card .caption {
+        font-size: 2em;
+    }
+
+    #video .content h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    #video .content h2 {
+        font-size: 2em;
+    }
+
+    #video-description .content h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    #video-description .content h2 {
+        font-size: 2em;
+    }
+
+    .gallery > a {
+        width: calc(33.33333% - 4px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .section > h1 {
+        font-size: 2em;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    #video .content img {
+        width: 80px;
+        left: calc(50% - 40px);
+    }
+
+    #video-description .content img {
+        width: 80px;
+        left: calc(50% - 40px);
+    }
+
+    #benefits .content .card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #benefits, #study_time, #home_study, #explain_details {
+        padding: 20px 0 0;
+    }
+
+    #training_video .content {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+
+    #photos .content {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    #location .content > div {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    #home_study .background {
+        width: 550px;
+        left: 0;
+    }
+
+    .quotes {
+        padding-right: 20px;
+    }
+
+    .quotes:before {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #study_time h1, #explain_details h1 {
+        text-align: center;
+    }
+
+    .gallery > a {
+        width: calc(50% - 4px);
+    }
+}
+
+
