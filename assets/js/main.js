@@ -4,14 +4,11 @@ var isMobile = (function() {
     return check;
 })();
 
-if (isMobile) {
-    $('#video video source').attr('src', $('#video video source').data('mobile-src'));
-    $('.main-video').css('filter', 'none');
-} else {
+if (!isMobile) {
     $('#video video source').attr('src', $('#video video source').data('src'));
+    $('.main-video').addClass('blur');
+    $('#video video')[0].load();
 }
-
-$('#video video')[0].load();
 
 $(function () {
     var controller = new ScrollMagic.Controller();
