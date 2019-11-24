@@ -80,7 +80,5 @@ $(function () {
         controller.scrollTo("#benefits");
     });
 
-    lightGallery(document.getElementById('lightgallery'), {
-        thumbnail: true
-    });
+    $('#lightgallery').lightGallery({thumbnail: true});
 });
