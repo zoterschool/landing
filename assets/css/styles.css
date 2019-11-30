@@ -15,6 +15,20 @@ body {
     overflow: hidden;
 }
 
+.phone {
+    font-size: 3em;
+    color: #fff492;
+    font-family: 'Oswald', sans-serif;
+    padding: 5px 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.phone img {
+    height: 1.2em;
+    margin-right: 10px;
+}
+
 .main-video {
     width: 100%;
     height: 100%;
@@ -53,7 +67,7 @@ body {
     font-size: 4em;
 }
 
-#video .content img {
+#video .content #scrollDown {
     animation: MoveUpDown 1s linear infinite;
     width: 100px;
     position: absolute;
@@ -281,6 +295,16 @@ body {
     padding-bottom: 40px;
 }
 
+#location .content > div > div {
+    margin-bottom: 15px;
+}
+
+#location .phone-number a {
+    font-family: 'Oswald', sans-serif;
+    color: rgba(26, 26, 26, .7);
+    font-size: 0.9em;
+}
+
 footer {
     background-color: #e8e8e8;
     font-size: 1.3em;
@@ -492,7 +516,7 @@ footer div {
         margin-top: 0;
     }
 
-    #video .content img {
+    #video .content #scrollDown {
         width: 80px;
         left: calc(50% - 40px);
     }
@@ -549,6 +573,12 @@ footer div {
 
     .gallery > a {
         width: calc(50% - 4px);
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .phone {
+        font-size: 2em;
     }
 }
 
