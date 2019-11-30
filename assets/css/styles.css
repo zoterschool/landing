@@ -79,44 +79,6 @@ body {
     font-size: 2.5em;
 }
 
-#video-description {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-#video-description .content {
-    text-align: center;
-    color: #ffffffba;
-    width: 100%;
-    position: absolute;
-    bottom: 40%;
-    font-family: 'Oswald', sans-serif;
-    padding: 0 20px;
-}
-
-#video-description .content h1, #video-description .content h2 {
-    margin: 0;
-}
-
-#video-description .content h1 {
-    text-transform: uppercase;
-    font-size: 4em;
-}
-
-#video-description .content img {
-    animation: MoveUpDown 1s linear infinite;
-    width: 100px;
-    position: absolute;
-    cursor: pointer;
-    left: calc(50% - 50px);
-}
-
-#video-description .content h2 {
-    font-size: 2.5em;
-}
-
 #benefits, #study_time, #home_study, #explain_details {
     width: 100%;
     background: #fff;
@@ -490,15 +452,6 @@ footer div {
         font-size: 2em;
     }
 
-    #video-description .content h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
-
-    #video-description .content h2 {
-        font-size: 2em;
-    }
-
     .gallery > a {
         width: calc(33.33333% - 4px);
     }
@@ -517,11 +470,6 @@ footer div {
     }
 
     #video .content #scrollDown {
-        width: 80px;
-        left: calc(50% - 40px);
-    }
-
-    #video-description .content img {
         width: 80px;
         left: calc(50% - 40px);
     }
