@@ -98,16 +98,16 @@ $(function () {
     });
 
     $('#scrollDown').click(function () {
-        ga('send', 'event', 'scrollButton', 'click');
+        gtag('event', 'click_scroll_button', {'event_category' : 'page_view'});
         controller.scrollTo("#benefits");
     });
 
     $('#video .phone').click(function () {
-        ga('send', 'event', 'phoneCall-1', 'click');
+        gtag('event', 'click_call_secondary', {'event_category' : 'phone_call'});
     });
 
     $('#location .phone-number a').click(function () {
-        ga('send', 'event', 'phoneCall-2', 'click');
+        gtag('event', 'click_call_main', {'event_category' : 'phone_call'});
     });
 
     var $lightGallery = $('#lightgallery');
@@ -115,7 +115,7 @@ $(function () {
     $lightGallery.lightGallery({thumbnail: true});
 
     $lightGallery.on('onAfterOpen.lg', function () {
-        ga('send', 'event', 'photo', 'click');
+        gtag('event', 'open_gallery', {'event_category' : 'photo'});
     });
 
     $('.card img, img.background').each(function () {
@@ -125,22 +125,22 @@ $(function () {
     $(window).on("scroll", function () {
         if (!scrolledToBenefits && $(window).scrollTop() >= $('#benefits').offset().top) {
             scrolledToBenefits = true;
-            ga('send', 'event', 'benefits', 'scroll');
+            gtag('event', 'scroll_to_benefits', {'event_category' : 'page_view'});
         }
 
         if (!scrolledToStudyTime && $(window).scrollTop() >= $('#study_time').offset().top) {
             scrolledToStudyTime = true;
-            ga('send', 'event', 'studyTime', 'scroll');
+            gtag('event', 'scroll_to_faq', {'event_category' : 'page_view'});
         }
 
         if (!scrolledToVideo && $(window).scrollTop() >= $('#training_video').offset().top) {
             scrolledToVideo = true;
-            ga('send', 'event', 'video', 'scroll');
+            gtag('event', 'scroll_to_video', {'event_category' : 'page_view'});
         }
 
         if (!scrolledToEnd && ($(window).scrollTop() + window.innerHeight) >= ($(document).height() - 163)) {
             scrolledToEnd = true;
-            ga('send', 'event', 'pageEnd', 'scroll');
+            gtag('event', 'scroll_to_page_end', {'event_category' : 'page_view'});
         }
     });
 });
